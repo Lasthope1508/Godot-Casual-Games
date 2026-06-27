@@ -30,6 +30,13 @@ Tham khảo mã nguồn tại thư mục `examples/vfx/`:
 - **[particle_vfx_guide.md](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/references/particle_vfx_guide.md)**: Hướng dẫn chi tiết cách cấu hình hạt (GPUParticles) để áp dụng các gói Premium VFX bên ngoài (Spritesheets/Flipbook, Gradient Ramps, Scale Curves, Damping).
 - **[object_vfx_classification.md](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/references/object_vfx_classification.md)**: Hướng dẫn phân loại vật thể (Người, Gạch, Tia sáng, Vật phẩm) và các đặc tính vật lý & cấu hình hạt tương ứng.
 
+### 🎥 Góc máy & Cảnh cắt Điện ảnh (Camera Angles & Cutscenes)
+Tham khảo mã nguồn tại thư mục `examples/camera/`:
+- **[camera_controller_2d.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/camera/camera_controller_2d.gd)**: Camera 2D nâng cao bám theo mục tiêu mượt mà, hỗ trợ lia mắt nhìn trước hướng di chuyển (Look-ahead/Leading), biên bản đồ và đổi đối tượng tiêu cự.
+- **[camera_controller_3d.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/camera/camera_controller_3d.gd)**: Trình điều khiển camera 3D hỗ trợ góc nhìn người thứ ba (Orbit), góc nhìn thứ nhất (First Person) và chạy dọc đường ray ray-dolly điện ảnh (Path3D).
+- **[camera_isometric_25d.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/camera/camera_isometric_25d.gd)**: Camera chuyên dụng cho hệ game Isometric chéo, tính toán di chuyển/pan theo đúng trục nghiêng địa hình và xử lý Zoom.
+- **[cutscene_sequencer.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/camera/cutscene_sequencer.gd)**: Bộ tuần tự sự kiện cutscene (Sequencer) tự động khóa phím người chơi, chạy các chuỗi hành động (lia máy, diễn hoạt cảnh nhân vật, hiện hội thoại và chờ đợi) và khôi phục khi hoàn thành.
+
 ## Khung Dự án Từ các Template Chuẩn (Maaack & Takin):
 Tham khảo mã nguồn thực tế đã lưu vào kho skill:
 
