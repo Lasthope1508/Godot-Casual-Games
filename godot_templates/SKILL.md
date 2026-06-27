@@ -28,6 +28,7 @@ Tham khảo mã nguồn tại thư mục `examples/vfx/`:
 - **[decal_spawner_3d.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/decal_spawner_3d.gd)**: Hệ thống phun decal (vết đạn, vết máu) ghim lên bề mặt 3D theo hướng Vector pháp tuyến địa hình.
 - **[billboard_helper.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/billboard_helper.gd)**: Trình xoay đối tượng 2D luôn hướng về phía Camera 3D (Cylindrical & Spherical Billboard) cho game phong cách 2.5D (Doom/Octopath Traveler).
 - **[particle_vfx_guide.md](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/references/particle_vfx_guide.md)**: Hướng dẫn chi tiết cách cấu hình hạt (GPUParticles) để áp dụng các gói Premium VFX bên ngoài (Spritesheets/Flipbook, Gradient Ramps, Scale Curves, Damping).
+- **[object_vfx_classification.md](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/references/object_vfx_classification.md)**: Hướng dẫn phân loại vật thể (Người, Gạch, Tia sáng, Vật phẩm) và các đặc tính vật lý & cấu hình hạt tương ứng.
 
 ## Khung Dự án Từ các Template Chuẩn (Maaack & Takin):
 Tham khảo mã nguồn thực tế đã lưu vào kho skill:
