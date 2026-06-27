@@ -15,6 +15,14 @@ Khi phát triển game Godot 4 2D, hãy mở thư mục `examples/` để tham k
 6.  **examples/isometric_helper.gd**: Hỗ trợ toán học chuyển đổi hệ tọa độ Isometric 2.5D (Map sang World và ngược lại) cùng thiết lập tìm đường `AStar2D` lưới chéo.
 7.  **examples/editor_asset_placer.gd**: Template mẫu `@tool` mở rộng trình biên tập (Editor Plugin) giúp thực hiện Raycasting từ chuột trong Viewport 3D và tự động đặt vật thể dọc theo bề mặt (Normal alignment).
 
+### ✨ Hiệu ứng hình ảnh & Cảm giác chơi (VFX & Game Feel / Juice)
+Tham khảo mã nguồn tại thư mục `examples/vfx/`:
+- **[screen_shake.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/screen_shake.gd)**: Rung màn hình Camera2D bằng tiếng ồn Simplex Noise giúp các chấn động, vụ nổ mượt mà và thực tế.
+- **[hit_flash.gdshader](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/hit_flash.gdshader)**: Shader nhấp nháy màu trắng/đỏ khi Sprite nhận sát thương (Visual feedback).
+- **[vfx_spawner.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/vfx_spawner.gd)**: Trình tạo hiệu ứng hạt (Particles) và âm thanh (SFX) tự động giải phóng bộ nhớ khi hoàn thành để chống tràn RAM.
+- **[squash_stretch.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/squash_stretch.gd)**: Hiệu ứng co giãn đàn hồi vật lý hoạt họa cho nhân vật bằng Tween khi nhảy và tiếp đất.
+- **[dissolve.gdshader](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/dissolve.gdshader)**: Shader tan biến theo cấu trúc ảnh nhiễu (Noise texture) kèm hiệu ứng viền cháy rực lửa.
+
 ## Khung Dự án Từ các Template Chuẩn (Maaack & Takin):
 Tham khảo mã nguồn thực tế đã lưu vào kho skill:
 
