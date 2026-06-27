@@ -22,6 +22,11 @@ Tham khảo mã nguồn tại thư mục `examples/vfx/`:
 - **[vfx_spawner.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/vfx_spawner.gd)**: Trình tạo hiệu ứng hạt (Particles) và âm thanh (SFX) tự động giải phóng bộ nhớ khi hoàn thành để chống tràn RAM.
 - **[squash_stretch.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/squash_stretch.gd)**: Hiệu ứng co giãn đàn hồi vật lý hoạt họa cho nhân vật bằng Tween khi nhảy và tiếp đất.
 - **[dissolve.gdshader](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/dissolve.gdshader)**: Shader tan biến theo cấu trúc ảnh nhiễu (Noise texture) kèm hiệu ứng viền cháy rực lửa.
+- **[dash_ghost.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/dash_ghost.gd)**: Tạo ảnh bóng mờ sau lưng nhân vật khi lướt đi (Dash Ghost / Afterimage).
+- **[trail_2d.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/trail_2d.gd)**: Hiệu ứng đường kéo vệt (Trail) cho đạn hoặc kiếm khí bằng Line2D.
+- **[shield_3d.gdshader](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/shield_3d.gdshader)**: Shader lá chắn năng lượng 3D phát sáng ở cạnh bằng toán học Fresnel.
+- **[decal_spawner_3d.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/decal_spawner_3d.gd)**: Hệ thống phun decal (vết đạn, vết máu) ghim lên bề mặt 3D theo hướng Vector pháp tuyến địa hình.
+- **[billboard_helper.gd](file:///C:/Users/Admin/.gemini/config/skills/godot_templates/examples/vfx/billboard_helper.gd)**: Trình xoay đối tượng 2D luôn hướng về phía Camera 3D (Cylindrical & Spherical Billboard) cho game phong cách 2.5D (Doom/Octopath Traveler).
 
 ## Khung Dự án Từ các Template Chuẩn (Maaack & Takin):
 Tham khảo mã nguồn thực tế đã lưu vào kho skill:
