@@ -18,10 +18,10 @@ func _ready() -> void:
 
 func _on_theme_changed(name: String, config: ThemeConfig) -> void:
 	if title_label:
-		title_label.text = config.theme_title
+		title_label.text = "GLYPHFLOW ARRAYS"
 		title_label.add_theme_color_override("font_color", config.text_color)
 	if subtitle_label:
-		subtitle_label.text = config.theme_subtitle
+		subtitle_label.text = config.theme_title.to_upper() + " — " + config.theme_subtitle.to_upper()
 		subtitle_label.add_theme_color_override("font_color", config.accent_color)
 		
 	var copyright_label = get_node_or_null("MarginContainer/VBoxContainer/CopyrightLabel")
