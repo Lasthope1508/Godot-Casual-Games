@@ -370,6 +370,15 @@ func _update_mute_button() -> void:
 			mute_btn.icon = load("res://Assets/Icons/audioOff.png")
 		else:
 			mute_btn.icon = load("res://Assets/Icons/audioOn.png")
+			
+		# Dynamic contrast tinting: Modulate the white icon to contrast against the theme button bg
+		var config = ThemeManager.active_theme
+		if config:
+			mute_btn.add_theme_color_override("icon_normal_color", config.text_color)
+			mute_btn.add_theme_color_override("icon_hover_color", config.accent_color)
+			mute_btn.add_theme_color_override("icon_pressed_color", config.accent_color)
+			mute_btn.add_theme_color_override("icon_focus_color", config.accent_color)
+
 
 
 

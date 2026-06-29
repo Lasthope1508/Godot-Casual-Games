@@ -1,10 +1,13 @@
-[gd_resource type="Resource" script_class="ThemeConfig" load_steps=2 format=3 uid="uid://woodtheme"]
+[gd_resource type="Resource" script_class="ThemeConfig" load_steps=3 format=3 uid="uid://woodtheme"]
 
 [ext_resource type="Script" path="res://Resources/Classes/ThemeConfig.gd" id="1_water"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/Alegreya-ExtraBold.ttf" id="2_wood"]
 
 [resource]
 script = ExtResource("1_water")
+custom_font = ExtResource("2_wood")
 theme_name = "wood_theme"
+
 theme_title = "LUXURY WOOD & GOLD"
 theme_subtitle = "Classic Board Edition"
 text_color = Color(0.96, 0.62, 0.04, 1)

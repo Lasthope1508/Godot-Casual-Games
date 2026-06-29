@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ThemeConfig" load_steps=10 format=3 uid="uid://gardentheme"]
+[gd_resource type="Resource" script_class="ThemeConfig" load_steps=11 format=3 uid="uid://gardentheme"]
 
 [ext_resource type="Script" path="res://Resources/Classes/ThemeConfig.gd" id="1_garden"]
 [ext_resource type="Texture2D" path="res://Assets/Themes/garden_theme/cell_bg.png" id="2_garden"]
@@ -9,9 +9,12 @@
 [ext_resource type="Texture2D" path="res://Assets/Themes/garden_theme/pipe_x.png" id="7_garden"]
 [ext_resource type="Texture2D" path="res://Assets/Themes/garden_theme/source.png" id="8_garden"]
 [ext_resource type="Texture2D" path="res://Assets/Themes/garden_theme/target.png" id="9_garden"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/Poppins-Bold.ttf" id="10_garden"]
 
 [resource]
 script = ExtResource("1_garden")
+custom_font = ExtResource("10_garden")
+
 theme_name = "garden_theme"
 theme_title = "GROW A GARDEN"
 theme_subtitle = "Hose & Blossom Edition"

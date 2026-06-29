@@ -23,6 +23,10 @@ Dự án tuân thủ nghiêm ngặt nguyên lý **SSOT (Single Source of Truth)*
 *   **`ThemeManager` ([res://Resources/Globals/ThemeManager.gd](file:///C:/Users/Admin/Desktop/Godot%20Casual%20Games/WaternetGodot/Resources/Globals/ThemeManager.gd))**:
     *   Quản lý việc tải các file cấu hình `.tres` động (`garden_theme.tres`, `wood_theme.tres`, `hacknet_theme.tres`).
     *   Tự động override thuộc tính vào file Theme toàn cục `res://Resources/Theme/main_theme.tres` và phát tín hiệu `theme_changed`.
+*   **Quy chuẩn Tương phản & Trộn màu Icon (Contrast & Icon Tinting)**:
+    *   Để ngăn ngừa lỗi hiển thị (như icon màu trắng trên nền button màu kem/sáng của Garden Theme), hệ thống tự động hòa trộn (modulate) màu biểu tượng của các nút bấm có icon (như nút Mute) tại runtime bằng cách ghi đè màu `icon_normal_color` theo màu `text_color` và `accent_color` của theme đang active.
+    *   **Bắt buộc**: Trước khi sinh asset hay layout giao diện, Agent kế nhiệm bắt buộc thực hiện **Design Language Normalization (Chuẩn hóa ngôn ngữ thiết kế)**: Kiểm tra tương phản, đảm bảo mọi thành phần foreground (chữ, icon, viền) nổi bật rõ ràng trên màu nền background của theme đó.
+
 
 ---
 
