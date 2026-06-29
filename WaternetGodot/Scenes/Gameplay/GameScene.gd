@@ -64,6 +64,13 @@ func _on_theme_changed(name: String, config: ThemeConfig) -> void:
 		moves_label.add_theme_color_override("font_color", config.accent_color)
 	if popup_title:
 		popup_title.add_theme_color_override("font_color", config.text_color)
+		
+	# Dynamic sizing using utility_button_height from active theme config (SSOT sizing)
+	var reset_btn = get_node_or_null("HUD/MarginContainer/VBoxContainer/HBoxHeader/ResetBtn")
+	if reset_btn and config:
+		reset_btn.custom_minimum_size = Vector2(config.utility_button_height * 2.0, config.utility_button_height)
+		
+	_update_mute_button()
 	queue_redraw()
 
 func _recalculate_layout() -> void:
@@ -371,13 +378,28 @@ func _update_mute_button() -> void:
 		else:
 			mute_btn.icon = load("res://Assets/Icons/audioOn.png")
 			
-		# Dynamic contrast tinting: Modulate the white icon to contrast against the theme button bg
+		# Dynamic contrast tinting and SSOT sizing
 		var config = ThemeManager.active_theme
 		if config:
 			mute_btn.add_theme_color_override("icon_normal_color", config.text_color)
 			mute_btn.add_theme_color_override("icon_hover_color", config.accent_color)
 			mute_btn.add_theme_color_override("icon_pressed_color", config.accent_color)
 			mute_btn.add_theme_color_override("icon_focus_color", config.accent_color)
+			
+			# Dynamic sizing using utility_button_height from active theme config (SSOT sizing)
+			var btn_h = config.utility_button_height
+			mute_btn.custom_minimum_size = Vector2(btn_h, btn_h) # Square button
+			
+			# Reduce content margins in the button's styleboxes to make the icon expand and look proportional
+			for state in ["normal", "hover", "pressed", "focus", "disabled"]:
+				var base_sb = mute_btn.get_theme_stylebox(state, "Button")
+				if base_sb is StyleBoxFlat:
+					var custom_sb = base_sb.duplicate()
+					custom_sb.content_margin_left = 6
+					custom_sb.content_margin_right = 6
+					custom_sb.content_margin_top = 6
+					custom_sb.content_margin_bottom = 6
+					mute_btn.add_theme_stylebox_override(state, custom_sb)
 
 
 
