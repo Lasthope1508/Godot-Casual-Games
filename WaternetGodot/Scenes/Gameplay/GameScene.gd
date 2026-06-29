@@ -159,11 +159,6 @@ func _draw() -> void:
 			else:
 				# Vector cell backgrounds with bevel recessed 3D depth
 				var cell_color = bg_cell_color
-				if Vector2i(x, y) == grid.source_pos:
-					cell_color = source_color
-				elif Vector2i(x, y) == grid.target_pos:
-					cell_color = target_color
-					
 				draw_rect(cell_rect, cell_color)
 				
 				# 3D Bevel recessed shadow / highlight effect
@@ -174,8 +169,17 @@ func _draw() -> void:
 				draw_line(Vector2(cell_rect.position.x, cell_rect.end.y), cell_rect.end, highlight_c, 2.0)
 				draw_line(Vector2(cell_rect.end.x, cell_rect.position.y), cell_rect.end, highlight_c, 2.0)
 				
-				# Cell border outline
-				draw_rect(cell_rect, border_color, false, 1.0)
+				# Cell border outline - thicker colored frames for special nodes
+				var cell_border_color = border_color
+				var border_w = 1.0
+				if Vector2i(x, y) == grid.source_pos:
+					cell_border_color = source_color
+					border_w = 3.0
+				elif Vector2i(x, y) == grid.target_pos:
+					cell_border_color = target_color
+					border_w = 3.0
+					
+				draw_rect(cell_rect, cell_border_color, false, border_w)
 				
 	# PASS 2 & 3: Draw Pipes / Hoses / Water Pumps
 	if has_textures:
@@ -256,8 +260,13 @@ func _draw() -> void:
 						Vector2(0, 1),  # Bottom
 						Vector2(-1, 0)  # Left
 					]
-					var arrow_color = source_color if is_watered else Color.BLACK
-					draw_circle(center, CELL_SIZE * dot_ratio, Color.BLACK if not is_watered else Color.DARK_BLUE)
+					var arrow_color = text_color if not is_watered else text_color.lightened(0.3)
+					
+					var circle_bg = theme.button_normal_bg if theme else Color(0.05, 0.05, 0.1)
+					if is_watered:
+						circle_bg = text_color.darkened(0.7)
+					draw_circle(center, CELL_SIZE * dot_ratio, circle_bg)
+					
 					for i in range(4):
 						if ports[i]:
 							var dir_vec = directions_vec[i]
