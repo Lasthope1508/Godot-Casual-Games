@@ -2,7 +2,7 @@ class_name ThemeConfig extends Resource
 
 @export_group("Theme Info")
 @export var theme_name: String = "default"
-@export var theme_title: String = "WATERNET"
+@export var theme_title: String = "GLYPHFLOW ARRAYS"
 @export var theme_subtitle: String = "Connection Puzzle"
 
 @export_group("Brand Colors")

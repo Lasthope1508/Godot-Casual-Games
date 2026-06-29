@@ -7,7 +7,7 @@ const LevelGeneratorScript = preload("res://Scripts/level_generator.gd")
 
 func _init() -> void:
 	print("=========================================")
-	print("  Running WaternetGodot Test Suite...    ")
+	print("  Running Glyphflow Arrays Test Suite... ")
 	print("=========================================")
 	
 	var passed = true

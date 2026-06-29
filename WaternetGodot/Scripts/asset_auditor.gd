@@ -1,6 +1,6 @@
 # Dynamic Reflection-Based Asset Auditor for Godot 4 Projects.
 # Uses runtime property reflection to audit any resource inheriting from ThemeConfig.
-# Works globally across all game clients (Waternet, BloxChain, or future projects).
+# Works globally across all game clients (Glyphflow Arrays, BloxChain, or future projects).
 extends RefCounted
 class_name AssetAuditor
 
