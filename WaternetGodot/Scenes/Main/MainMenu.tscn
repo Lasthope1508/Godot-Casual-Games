@@ -90,6 +90,13 @@ custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 text = "VOLUME: ON"
 
+[node name="CopyrightLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 14
+text = "© 2026 Shinokute Studio. All Rights Reserved."
+horizontal_alignment = 1
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/PlayBtn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/LeaderboardBtn" to="." method="_on_leaderboard_btn_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxTheme/ThemeBtn" to="." method="_on_theme_btn_pressed"]

@@ -12,7 +12,11 @@ config_version=5
 
 config/name="Glyphflow Arrays"
 config/version="1.0.38"
-run/main_scene="res://Scenes/Gameplay/GameScene.tscn"
+run/main_scene="res://Scenes/Common/Splash.tscn"
+boot_splash/image="res://Assets/Icons/logo.png"
+boot_splash/fullsize=true
+boot_splash/use_filter=true
+boot_splash/bg_color=Color(0.02, 0.02, 0.06, 1)
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.png"
 

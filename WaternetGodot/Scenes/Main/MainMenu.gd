@@ -24,6 +24,11 @@ func _on_theme_changed(name: String, config: ThemeConfig) -> void:
 		subtitle_label.text = config.theme_subtitle
 		subtitle_label.add_theme_color_override("font_color", config.accent_color)
 		
+	var copyright_label = get_node_or_null("MarginContainer/VBoxContainer/CopyrightLabel")
+	if copyright_label:
+		copyright_label.add_theme_color_override("font_color", config.text_color.darkened(0.2))
+
+		
 	# Redraw background ColorRect
 	$Background.color = config.panel_bg_color
 	
