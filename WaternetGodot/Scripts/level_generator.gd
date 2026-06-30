@@ -8,24 +8,24 @@ static func generate_level(level_id: int, is_randomized: bool = true) -> Diction
 		rng.seed = level_id
 	
 	# Determine board size based on level ID difficulty scale
-	var width := 3
-	var height := 3
+	var width := 5
+	var height := 5
 	
 	if level_id <= 3:
-		width = 3
-		height = 3
-	elif level_id <= 6:
-		width = 4
-		height = 4
-	elif level_id <= 9:
 		width = 5
 		height = 5
-	elif level_id <= 12:
+	elif level_id <= 6:
 		width = 6
 		height = 6
-	elif level_id <= 15:
+	elif level_id <= 9:
+		width = 7
+		height = 7
+	elif level_id <= 12:
 		width = 8
 		height = 8
+	elif level_id <= 15:
+		width = 9
+		height = 9
 	else:
 		width = 10
 		height = 10
